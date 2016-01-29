@@ -1,0 +1,22 @@
+{
+    "name": "svd/admin-stylesset",
+    "description": "Styles set require for SvD admin panel",
+    "type": "component",
+    "keywords": ["svd", "admion-panel", "css", "less", "mobile-first", "responsive", "front-end", "web"],
+    "license": "proprietary",
+    "require": {
+        "components/font-awesome": "~4.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        },
+        "component": {
+            "files": [
+                "css/*.css",
+                "fonts/*",
+                "less/*.less"
+            ]
+        }
+    }
+}

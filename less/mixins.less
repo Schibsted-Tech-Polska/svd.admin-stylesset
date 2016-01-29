@@ -1,0 +1,67 @@
+@color-font-inverse: #fff;
+@color-font-standard: #333;
+@color-link: #08c;
+@color-link-hover: #005580;
+@color-list-border: #ededed;
+
+@font-icons: 'FontAwesome';
+@font-standard: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+@mainborder: 1px solid #ccc;
+
+@padding-mainbox: 20px;
+
+@space-body: 7px;
+@space-form: 5px;
+@space-standard: 10px;
+
+.beforeAfterBlock() {
+    content: '';
+    display: block;
+    position: absolute;
+}
+.heightFullMinus(@offset) {
+    height: ~"calc(100% - @{offset})";
+}
+.widthFullMinus(@offset) {
+    width: ~"calc(100% - @{offset})";
+}
+.fontHeaderMain() {
+    font-size: 24.5px;
+    font-weight: bold;
+}
+.fontHeaderElement() {
+    font-size: 18px;
+    font-weight: bold;
+}
+.flexContainer(@direction) {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: @direction;
+    -webkit-flex-direction: @direction;
+    flex-direction: @direction;
+}
+.flexElement(@shrink, @grow) {
+    -ms-flex-grow: @grow;
+    -webkit-flex-grow: @grow;
+    flex-grow: @grow;
+    -ms-flex-shrink: @shrink;
+    -webkit-flex-shrink: @shrink;
+    flex-shrink: @shrink;
+}
+.animation(@name, @duration, @iterationCount, @timingFunction) {
+    -moz-animation-name: @name;
+    -moz-animation-duration: @duration;
+    -moz-animation-iteration-count: @iterationCount;
+    -moz-animation-timing-function: @timingFunction;
+    -webkit-animation-name: @name;
+    -webkit-animation-duration: @duration;
+    -webkit-animation-iteration-count: @iterationCount;
+    -webkit-animation-timing-function: @timingFunction;
+    animation-name: @name;
+    animation-duration: @duration;
+    animation-iteration-count: @iterationCount;
+    animation-timing-function: @timingFunction;
+}

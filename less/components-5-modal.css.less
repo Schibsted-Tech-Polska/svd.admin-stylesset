@@ -1,0 +1,176 @@
+@import "mixins";
+
+@color-label: #999;
+@modal-border-radius: 4px;
+@modal-height-min: 300px;
+@modal-inner-padding: 15px;
+@modal-padding-horizontal: 20px;
+@modal-padding-vertical: 50px;
+@modal-width-min: 400px;
+@modal-width-standard: 560px;
+@modal-width-wide: 800px;
+
+#modal-shadow {
+    background: #000;
+    height: 100%;
+    left: 0;
+    opacity: 0.65;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.modal {
+    .flexContainer(column);
+    left: 0;
+    margin: 0 auto;
+    max-height: 100%;
+    min-height: @modal-height-min;
+    max-width: @modal-width-standard + 2 * @modal-padding-horizontal;
+    min-width: @modal-width-min + 2 * @modal-padding-horizontal;
+    padding: @modal-padding-vertical @modal-padding-horizontal;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &.modal-wide {
+        max-width: @modal-width-wide + 2 * @modal-padding-horizontal;
+    }
+    &:focus {
+        outline: none;
+    }
+    &-header,
+    &-content,
+    &-footer {
+        margin: 0 auto;
+        padding: @modal-inner-padding;
+        width: 100%;
+    }
+    & > * {
+        &:first-child {
+            border-radius: @modal-border-radius @modal-border-radius 0 0;
+        }
+        &:last-child {
+            border-radius: 0 0 @modal-border-radius @modal-border-radius;
+        }
+        &:first-child:last-child {
+            border-radius: @modal-border-radius;
+        }
+    }
+    & > form {
+        .flexContainer(column);
+        .flexElement(1, 1);
+        overflow: auto;
+    }
+    &-header,
+    &-footer {
+        .flexElement(1, 0);
+        background: #f5f5f5;
+    }
+    &-header {
+        .fontHeaderMain();
+    }
+    &-footer {
+        border-radius: 0 0 @modal-border-radius @modal-border-radius;
+    }
+    &-content {
+        .flexElement(1, 1);
+        background: #fff;
+        overflow: auto;
+        padding: 0 @modal-inner-padding;
+
+        &-confirm {
+            font-size: 18px;
+            margin: 0;
+            padding: 55px 0 45px;
+        }
+    }
+    &-waiting {
+        .flexElement(1, 1);
+        background: #fff;
+        position: relative;
+
+        &:before {
+            .animation(rotate, 1s, infinite, linear);
+            color: #ccc;
+            content: '\f110';
+            display: block;
+            font: 40px/50px @font-icons;
+            height: 50px;
+            left: ~'calc(50% - 25px)';
+            position: absolute;
+            text-align: center;
+            top: ~'calc(50% - 25px)';
+            width: 50px;
+        }
+    }
+    &-section {
+        margin: 0 -@modal-inner-padding;
+
+        &-header {
+            background: #f5f5f5;
+            border-top: 1px solid #ddd;
+            font-size: 14px;
+            line-height: 14px;
+            margin: 0;
+            padding: 10px 15px;
+
+            .icon {
+                line-height: 12px;
+                margin-right: 5px;
+            }
+        }
+        &-row {
+            .flexContainer(row);
+            margin: 8px 0;
+            padding: 0 15px;
+
+            &-label {
+                .flexElement(1, 0);
+                color: @color-label;
+                display: block;
+                font-size: 12px;
+                line-height: 20px;
+                padding: 6px 5px 6px 0;
+                text-transform: uppercase;
+                white-space: nowrap;
+
+                &.required:after {
+                    color: #f00;
+                    content: ' *';
+                }
+            }
+            &-value {
+                .flexElement(1, 1);
+
+                > *:first-child:not([type="checkbox"]):not([type="radio"]) {
+                    margin: 0 !important;
+                    width: 100%;
+                }
+                > textarea {
+                    resize: vertical;
+                }
+                > .message,
+                > .message-list {
+                    margin: 5px 0 0;
+                }
+            }
+            &-info {
+                color: @color-label;
+                font-size: 12px;
+                margin: 5px 0 0;
+            }
+            &.modal-noform &-label,
+            &.modal-noform &-value {
+                line-height: 20px;
+                padding-bottom: 1px;
+                padding-top: 1px;
+            }
+            &.modal-noform &-value {
+                font-size: 15px;
+            }
+        }
+    }
+    &-footer {
+        text-align: right;
+    }
+}

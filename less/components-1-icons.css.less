@@ -1,0 +1,106 @@
+@import "mixins";
+
+.icon {
+    font: 16px/1 @font-icons;
+
+    &:hover {
+        text-decoration: none;
+    }
+    &&-pause,
+    &&-play {
+        font-size: 12px;
+    }
+    &&-arrow-up:before {
+        content: '\f0aa';
+    }
+    &&-arrow-down:before {
+        content: '\f0ab';
+    }
+    &&-arrow-left:before {
+        content: '\f0a8';
+    }
+    &&-arrow-right:before {
+        content: '\f0a9';
+    }
+    &&-bars:before {
+        content: '\f0c9';
+    }
+    &&-chart-area:before {
+        content: '\f1fe';
+    }
+    &&-chart-bar:before {
+        content: '\f080';
+    }
+    &&-chart-line:before {
+        content: '\f201';
+    }
+    &&-chart-pie:before {
+        content: '\f200';
+    }
+    &&-check:before {
+        content: '\f00c';
+    }
+    &&-delete:before {
+        content: '\f014';
+    }
+    &&-edit:before {
+        content: '\f040';
+    }
+    &&-link:before {
+        content: '\f0c1';
+    }
+    &&-list:before {
+        content: '\f00b';
+    }
+    &&-minus:before {
+        content: '\f068';
+    }
+    &&-pause:before {
+        content: '\f04c';
+    }
+    &&-play:before {
+        content: '\f04b';
+    }
+    &&-plus:before {
+        content: '\f067';
+    }
+    &&-remove:before {
+        content: '\f00d';
+    }
+    &&-repeat:before {
+        content: '\f01e';
+    }
+    &&-search:before {
+        content: '\f002';
+    }
+    &&-spinner:before {
+        content: '\f110';
+    }
+    &&-undo:before {
+        content: '\f0e2';
+    }
+    &&-warning:before {
+        content: '\f071';
+    }
+    &-rotate {
+        &-clockwise {
+            .animation(rotate, 1s, infinite, linear);
+            display: inline-block;
+        }
+    }
+}
+
+.bullet {
+    background: #c8c8c8;
+    border: 2px solid #c8c8c8;
+    border-radius: 50%;
+    cursor: help;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+
+    &&-active {
+        background-color: #a9dba9;
+        border-color: #46a546;
+    }
+}

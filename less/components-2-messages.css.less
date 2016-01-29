@@ -1,0 +1,64 @@
+@import "mixins";
+
+@message-border-radius: 3px;
+
+.message {
+    background: #f0f9f0;
+    border: 1px solid #51a351;
+    border-radius: @message-border-radius;
+    color: #888;
+    font-size: 12px;
+    font-weight: bold;
+    margin: @space-standard 0;
+    padding: 7.2px 6px;
+
+    & > .icon {
+        line-height: 14px;
+        margin: 0 14px 0 3px;
+    }
+    &&-success {
+        background-color: #f0f9f0;
+        border-color: #51a351;
+
+        & > .icon {
+            color: #51a351;
+        }
+    }
+    &&-warning {
+        background-color: #fbf6e8;
+        border-color: #dda300;
+
+        & > .icon {
+            color: #dda300;
+        }
+    }
+    &&-error {
+        background-color: #fef9f8;
+        border-color: #bd362f;
+
+        & > .icon {
+            color: #bd362f;
+        }
+    }
+    &-list {
+        margin: @space-standard 0;
+        padding: 0;
+        list-style: none;
+
+        > * {
+            border-bottom-width: 0;
+            border-radius: 0;
+            margin: 0;
+        }
+        > *:first-child {
+            border-radius: @message-border-radius @message-border-radius 0 0;
+        }
+        > *:last-child {
+            border-bottom-width: 1px;
+            border-radius: 0 0 @message-border-radius @message-border-radius;
+        }
+        > *:first-child:last-child {
+            border-radius: @message-border-radius;
+        }
+    }
+}
