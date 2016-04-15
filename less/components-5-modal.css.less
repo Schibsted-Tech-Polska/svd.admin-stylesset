@@ -124,7 +124,7 @@
             margin: 8px 0;
             padding: 0 15px;
 
-            &-label {
+            & > &-label {
                 .flexElement(1, 0);
                 color: @color-label;
                 display: block;
@@ -159,7 +159,7 @@
                 font-size: 12px;
                 margin: 5px 0 0;
             }
-            &.modal-noform &-label,
+            &.modal-noform > &-label,
             &.modal-noform &-value {
                 line-height: 20px;
                 padding-bottom: 1px;
@@ -168,6 +168,11 @@
             &.modal-noform &-value {
                 font-size: 15px;
             }
+        }
+        & > ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
     }
     &-footer {
