@@ -1,0 +1,23 @@
+{
+  "name": "admin-stylesset",
+  "version": "1.0.4",
+  "description": "Styles set require for SvD admin panel",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schibsted-Tech-Polska/svd.admin-stylesset.git"
+  },
+  "keywords": [
+    "svd",
+    "admion-panel",
+    "css",
+    "less",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "web"
+  ],
+  "bugs": {
+    "url": "https://github.com/Schibsted-Tech-Polska/svd.admin-stylesset/issues"
+  },
+  "homepage": "https://github.com/Schibsted-Tech-Polska/svd.admin-stylesset#readme"
+}
