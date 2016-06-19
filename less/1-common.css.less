@@ -207,6 +207,34 @@ img {
                     margin: 0;
                 }
             }
+            &-breadcrumbs {
+                clear: both;
+                float: left;
+                font-size: 14px;
+                list-style: none;
+                margin: 0;
+
+                &-item {
+                    float: left;
+                    margin: 0;
+                    padding: 0;
+
+                    a {
+                        color: inherit;
+                    }
+                    &:before {
+                        content: '→';
+                        margin: 0 13px;
+                    }
+                    &:first-child:before {
+                        content: '';
+                        margin: 0;
+                    }
+                }
+                @media (min-width: @width-wide-min) {
+                    padding: 6px 0;
+                }
+            }
         }
         &-loader {
             &:before {
@@ -225,5 +253,130 @@ img {
     }
     &-menu + &-content {
         .widthFullMinus(230px);
+    }
+}
+
+
+.box {
+    margin: 12px 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+
+    &-row {
+        clear: both;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        width: 100%;
+    }
+    &-col-1,
+    &-col-2,
+    &-col-3,
+    &-col-4,
+    &-col-5,
+    &-col-6 {
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    @media (min-width: @width-wide-min) {
+        &-col-1 {
+            width: 16.6667%;
+        }
+        &-col-2 {
+            width: 33.3333%;
+        }
+        &-col-3 {
+            width: 50%;
+        }
+        &-col-4 {
+            width: 66.6667%;
+        }
+        &-col-5 {
+            width: 83.3333%;
+        }
+        &-col-6 {
+            width: 100%;
+        }
+    }
+    &-cell {
+        margin: 0;
+        padding: 10px 15px;
+    }
+}
+
+
+.hide {
+    @media (max-width: @width-narrow-max) {
+        &-narrow {
+            display: none !important;
+        }
+    }
+    @media (min-width: @width-wide-min) {
+        &-wide {
+            display: none !important;
+        }
+    }
+}
+
+
+.fieldset {
+    background: #fcfcfc;
+    position: relative;
+
+    &-buttons {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+    }
+    .box-cell {
+        label {
+            .labelELement();
+        }
+    }
+}
+
+
+.header {
+    &-simple {
+        &-1,
+        &-2,
+        &-3,
+        &-4,
+        &-5 {
+            display: block;
+            font-weight: bold;
+            margin: 18px 0 12px;
+        }
+        &-1 {
+            font-size: 24px;
+        }
+        &-2 {
+            font-size: 21px;
+        }
+        &-3 {
+            font-size: 18px;
+        }
+        &-4 {
+            font-size: 15px;
+        }
+        &-5 {
+            font-size: 12px;
+        }
+    }
+    &-stripe {
+        background: #f5f5f5;
+        display: block;
+        font-size: 14px;
+        line-height: 14px;
+        margin: 18px 0 12px;
+        padding: 10px 15px;
+
+        .icon {
+            line-height: 12px;
+            margin-right: 5px;
+        }
     }
 }

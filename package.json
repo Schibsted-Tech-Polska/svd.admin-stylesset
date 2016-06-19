@@ -1,6 +1,6 @@
 {
   "name": "admin-stylesset",
-  "version": "1.0.4",
+  "version": "1.1.1",
   "scripts": {
     "build-less": "lessc less/admin-stylesset.less css/admin-stylesset.css",
     "build-less-min": "lessc --compress less/admin-stylesset.less css/admin-stylesset.min.css"

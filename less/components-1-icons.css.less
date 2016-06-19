@@ -10,50 +10,78 @@
     &&-play {
         font-size: 12px;
     }
-    &&-arrow-up:before {
-        content: '\f0aa';
+    &&-arrow {
+        &-down:before {
+            content: '\f0ab';
+        }
+        &-left:before {
+            content: '\f0a8';
+        }
+        &-right:before {
+            content: '\f0a9';
+        }
+        &-up:before {
+            content: '\f0aa';
+        }
     }
-    &&-arrow-down:before {
-        content: '\f0ab';
-    }
-    &&-arrow-left:before {
-        content: '\f0a8';
-    }
-    &&-arrow-right:before {
-        content: '\f0a9';
-    }
-    &&-arrows:before {
-        content: '\f047';
-    }
-    &&-arrows-h:before {
-        content: '\f07e';
-    }
-    &&-arrows-v:before {
-        content: '\f07d';
+    &&-arrows {
+        &:before {
+            content: '\f047';
+        }
+        &-h:before {
+            content: '\f07e';
+        }
+        &-v:before {
+            content: '\f07d';
+        }
     }
     &&-bars:before {
         content: '\f0c9';
     }
-    &&-chart-area:before {
-        content: '\f1fe';
-    }
-    &&-chart-bar:before {
-        content: '\f080';
-    }
-    &&-chart-line:before {
-        content: '\f201';
-    }
-    &&-chart-pie:before {
-        content: '\f200';
+    &&-chart {
+        &-area:before {
+            content: '\f1fe';
+        }
+        &-bar:before {
+            content: '\f080';
+        }
+        &-line:before {
+            content: '\f201';
+        }
+        &-pie:before {
+            content: '\f200';
+        }
     }
     &&-check:before {
         content: '\f00c';
+    }
+    &&-chevron {
+        &-down:before {
+            content: '\f13a';
+        }
+        &-left:before {
+            content: '\f137';
+        }
+        &-right:before {
+            content: '\f138';
+        }
+        &-up:before {
+            content: '\f139';
+        }
     }
     &&-delete:before {
         content: '\f014';
     }
     &&-edit:before {
         content: '\f040';
+    }
+    &&-eye {
+        &:before {
+            content: '\f06e';
+        }
+        &-slash:before {
+            content: '\f070';
+        }
     }
     &&-link:before {
         content: '\f0c1';

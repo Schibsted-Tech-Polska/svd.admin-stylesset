@@ -1,6 +1,5 @@
 @import "mixins";
 
-@color-label: #999;
 @modal-border-radius: 4px;
 @modal-height-min: 300px;
 @modal-inner-padding: 15px;
@@ -126,18 +125,8 @@
 
             & > &-label {
                 .flexElement(1, 0);
-                color: @color-label;
-                display: block;
-                font-size: 12px;
-                line-height: 20px;
+                .labelELement();
                 padding: 6px 5px 6px 0;
-                text-transform: uppercase;
-                white-space: nowrap;
-
-                &.required:after {
-                    color: #f00;
-                    content: ' *';
-                }
             }
             &-value {
                 .flexElement(1, 1);

@@ -1,5 +1,6 @@
 @color-font-inverse: #fff;
 @color-font-standard: #333;
+@color-label: #999;
 @color-link: #08c;
 @color-link-hover: #005580;
 @color-list-border: #ededed;
@@ -14,6 +15,9 @@
 @space-body: 7px;
 @space-form: 5px;
 @space-standard: 10px;
+
+@width-narrow-max: 1100px;
+@width-wide-min: (@width-narrow-max + 1px);
 
 .beforeAfterBlock() {
     content: '';
@@ -33,6 +37,19 @@
 .fontHeaderElement() {
     font-size: 18px;
     font-weight: bold;
+}
+.labelELement() {
+    color: @color-label;
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    &.required:after {
+        color: #f00;
+        content: ' *';
+    }
 }
 .flexContainer(@direction) {
     display: -ms-flexbox;

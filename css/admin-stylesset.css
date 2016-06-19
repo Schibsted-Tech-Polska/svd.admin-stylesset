@@ -203,6 +203,34 @@ input[type].mainbox-content-header-filter {
 .mainbox-content-header-buttons > .btn {
   margin: 0;
 }
+.mainbox-content-header-breadcrumbs {
+  clear: both;
+  float: left;
+  font-size: 14px;
+  list-style: none;
+  margin: 0;
+}
+.mainbox-content-header-breadcrumbs-item {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.mainbox-content-header-breadcrumbs-item a {
+  color: inherit;
+}
+.mainbox-content-header-breadcrumbs-item:before {
+  content: '→';
+  margin: 0 13px;
+}
+.mainbox-content-header-breadcrumbs-item:first-child:before {
+  content: '';
+  margin: 0;
+}
+@media (min-width: 1101px) {
+  .mainbox-content-header-breadcrumbs {
+    padding: 6px 0;
+  }
+}
 .mainbox-content-loader:before {
   -moz-animation-name: rotate;
   -moz-animation-duration: 1s;
@@ -229,6 +257,121 @@ input[type].mainbox-content-header-filter {
 .mainbox-menu + .mainbox-content {
   width: calc(100% - 230px);
 }
+.box {
+  margin: 12px 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+.box-row {
+  clear: both;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+.box-col-1,
+.box-col-2,
+.box-col-3,
+.box-col-4,
+.box-col-5,
+.box-col-6 {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+@media (min-width: 1101px) {
+  .box-col-1 {
+    width: 16.6667%;
+  }
+  .box-col-2 {
+    width: 33.3333%;
+  }
+  .box-col-3 {
+    width: 50%;
+  }
+  .box-col-4 {
+    width: 66.6667%;
+  }
+  .box-col-5 {
+    width: 83.3333%;
+  }
+  .box-col-6 {
+    width: 100%;
+  }
+}
+.box-cell {
+  margin: 0;
+  padding: 10px 15px;
+}
+@media (max-width: 1100px) {
+  .hide-narrow {
+    display: none !important;
+  }
+}
+@media (min-width: 1101px) {
+  .hide-wide {
+    display: none !important;
+  }
+}
+.fieldset {
+  background: #fcfcfc;
+  position: relative;
+}
+.fieldset-buttons {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+.fieldset .box-cell label {
+  color: #999;
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.fieldset .box-cell label.required:after {
+  color: #f00;
+  content: ' *';
+}
+.header-simple-1,
+.header-simple-2,
+.header-simple-3,
+.header-simple-4,
+.header-simple-5 {
+  display: block;
+  font-weight: bold;
+  margin: 18px 0 12px;
+}
+.header-simple-1 {
+  font-size: 24px;
+}
+.header-simple-2 {
+  font-size: 21px;
+}
+.header-simple-3 {
+  font-size: 18px;
+}
+.header-simple-4 {
+  font-size: 15px;
+}
+.header-simple-5 {
+  font-size: 12px;
+}
+.header-stripe {
+  background: #f5f5f5;
+  display: block;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 18px 0 12px;
+  padding: 10px 15px;
+}
+.header-stripe .icon {
+  line-height: 12px;
+  margin-right: 5px;
+}
 .icon {
   font: 16px/1 'FontAwesome';
 }
@@ -239,9 +382,6 @@ input[type].mainbox-content-header-filter {
 .icon.icon-play {
   font-size: 12px;
 }
-.icon.icon-arrow-up:before {
-  content: '\f0aa';
-}
 .icon.icon-arrow-down:before {
   content: '\f0ab';
 }
@@ -250,6 +390,9 @@ input[type].mainbox-content-header-filter {
 }
 .icon.icon-arrow-right:before {
   content: '\f0a9';
+}
+.icon.icon-arrow-up:before {
+  content: '\f0aa';
 }
 .icon.icon-arrows:before {
   content: '\f047';
@@ -278,11 +421,29 @@ input[type].mainbox-content-header-filter {
 .icon.icon-check:before {
   content: '\f00c';
 }
+.icon.icon-chevron-down:before {
+  content: '\f13a';
+}
+.icon.icon-chevron-left:before {
+  content: '\f137';
+}
+.icon.icon-chevron-right:before {
+  content: '\f138';
+}
+.icon.icon-chevron-up:before {
+  content: '\f139';
+}
 .icon.icon-delete:before {
   content: '\f014';
 }
 .icon.icon-edit:before {
   content: '\f040';
+}
+.icon.icon-eye:before {
+  content: '\f06e';
+}
+.icon.icon-eye-slash:before {
+  content: '\f070';
 }
 .icon.icon-link:before {
   content: '\f0c1';
@@ -638,6 +799,13 @@ input[type="checkbox"],
 input[type="radio"] {
   margin-top: 10px;
 }
+.form-size-1,
+.form-size-2,
+.form-size-3,
+.form-size-4,
+.form-size-5 {
+  max-width: 100%;
+}
 .form-size-1 {
   width: 100px;
 }
@@ -687,6 +855,19 @@ textarea.form-small {
 }
 select.form-small {
   padding-right: 12px;
+}
+.form-label {
+  color: #999;
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 11px 0;
+}
+.form-label.required:after {
+  color: #f00;
+  content: ' *';
 }
 .form-list {
   overflow: hidden;
@@ -1135,9 +1316,9 @@ select.form-small {
   display: block;
   font-size: 12px;
   line-height: 20px;
-  padding: 6px 5px 6px 0;
   text-transform: uppercase;
   white-space: nowrap;
+  padding: 6px 5px 6px 0;
 }
 .modal-section-row > .modal-section-row-label.required:after {
   color: #f00;
