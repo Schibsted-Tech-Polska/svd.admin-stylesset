@@ -611,21 +611,17 @@ a.btn:hover {
   line-height: 23px;
   padding: 0 8px;
 }
-.btn.btn-primary {
-  background: -webkit-linear-gradient(#08c 0%, #07c 100%);
-  background: linear-gradient(#08c 0%, #07c 100%);
-  border: 0;
-  color: #fff;
-}
 .btn.btn-primary:active,
 .btn.btn-primary:hover {
   background: -webkit-linear-gradient(#07c 0%, #06c 100%);
   background: linear-gradient(#07c 0%, #06c 100%);
 }
-.btn.btn-secondary {
-  background: #f1f1f1;
-  border-color: #ddd;
-  color: #555;
+.btn.btn-primary,
+.btn.btn-primary.btn-disabled {
+  background: -webkit-linear-gradient(#08c 0%, #07c 100%);
+  background: linear-gradient(#08c 0%, #07c 100%);
+  border: 0;
+  color: #fff;
 }
 .btn.btn-secondary:active,
 .btn.btn-secondary:hover {
@@ -633,18 +629,20 @@ a.btn:hover {
   border-color: #555;
   color: #f1f1f1;
 }
-.btn.btn-success {
-  background: #5bb65b;
+.btn.btn-secondary,
+.btn.btn-secondary.btn-disabled {
+  background: #f1f1f1;
   border-color: #ddd;
-  color: #f1f1f1;
+  color: #555;
 }
 .btn.btn-success:active,
 .btn.btn-success:hover {
   background: #51a351;
   border-color: #ddd;
 }
-.btn.btn-error {
-  background: #da4e49;
+.btn.btn-success,
+.btn.btn-success.btn-disabled {
+  background: #5bb65b;
   border-color: #ddd;
   color: #f1f1f1;
 }
@@ -652,6 +650,15 @@ a.btn:hover {
 .btn.btn-error:hover {
   background: #bd362f;
   border-color: #ddd;
+}
+.btn.btn-error,
+.btn.btn-error.btn-disabled {
+  background: #da4e49;
+  border-color: #ddd;
+  color: #f1f1f1;
+}
+.btn.btn-disabled {
+  cursor: default;
 }
 .btn.btn-switch {
   background: -webkit-linear-gradient(#fff 0%, #f5f5f5 100%);
