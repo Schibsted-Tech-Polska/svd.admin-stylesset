@@ -52,50 +52,61 @@ form {
         padding: 0 8px;
     }
     &&-primary {
-        background: -webkit-linear-gradient(#08c 0%, #07c 100%);
-        background: linear-gradient(#08c 0%, #07c 100%);
-        border: 0;
-        color: @color-font-inverse;
-
         &:active,
         &:hover {
             background: -webkit-linear-gradient(#07c 0%, #06c 100%);
             background: linear-gradient(#07c 0%, #06c 100%);
         }
+        &,
+        &.btn-disabled {
+            background: -webkit-linear-gradient(#08c 0%, #07c 100%);
+            background: linear-gradient(#08c 0%, #07c 100%);
+            border: 0;
+            color: @color-font-inverse;
+        }
     }
     &&-secondary {
-        background: #f1f1f1;
-        border-color: #ddd;
-        color: #555;
-
         &:active,
         &:hover {
             background: #555;
             border-color: #555;
             color: #f1f1f1;
         }
+        &,
+        &.btn-disabled {
+            background: #f1f1f1;
+            border-color: #ddd;
+            color: #555;
+        }
     }
     &&-success {
-        background: #5bb65b;
-        border-color: #ddd;
-        color: #f1f1f1;
-
         &:active,
         &:hover {
             background: #51a351;
             border-color: #ddd;
         }
+        &,
+        &.btn-disabled {
+            background: #5bb65b;
+            border-color: #ddd;
+            color: #f1f1f1;
+        }
     }
     &&-error {
-        background: #da4e49;
-        border-color: #ddd;
-        color: #f1f1f1;
-
         &:active,
         &:hover {
             background: #bd362f;
             border-color: #ddd;
         }
+        &,
+        &.btn-disabled {
+            background: #da4e49;
+            border-color: #ddd;
+            color: #f1f1f1;
+        }
+    }
+    &&-disabled {
+        cursor: default;
     }
     &&-switch {
         background: -webkit-linear-gradient(#fff 0%, #f5f5f5 100%);
