@@ -1,6 +1,7 @@
 @import "mixins";
 
 @modal-border-radius: 4px;
+@modal-color-content: #fff;
 @modal-height-min: 300px;
 @modal-inner-padding: 15px;
 @modal-padding-horizontal: 20px;
@@ -63,24 +64,61 @@
     &-header,
     &-footer {
         .flexElement(1, 0);
+        color: @color-font-standard;
         background: #f5f5f5;
+
+        a,
+        a:active,
+        a:hover {
+            color: @color-font-standard;
+            text-decoration: none;
+        }
+    }
+    &-dark&-header,
+    &-dark&-footer {
+        color: @color-font-inverse;
+        background: #555;
+
+        a,
+        a:active,
+        a:hover {
+            color: @color-font-inverse;
+        }
+    }
+    &-light&-header,
+    &-light&-footer {
+        background: @modal-color-content;
     }
     &-header {
-        .fontHeaderMain();
+        &-title {
+            font-size: 24.5px;
+            font-weight: bold;
+        }
+        &-right {
+            float: right;
+            position: relative;
+        }
     }
     &-footer {
         border-radius: 0 0 @modal-border-radius @modal-border-radius;
     }
     &-content {
         .flexElement(1, 1);
-        background: #fff;
+        background: @modal-color-content;
         overflow: auto;
         padding: 0 @modal-inner-padding;
 
-        &-confirm {
+        &-confirm, // @deprecated: use modal-content-message instead of modal-content-confirm
+        &-message {
             font-size: 18px;
             margin: 0;
             padding: 55px 0 45px;
+        }
+        &-center {
+            text-align: center;
+        }
+        &-right {
+            text-align: right;
         }
     }
     &-waiting {
