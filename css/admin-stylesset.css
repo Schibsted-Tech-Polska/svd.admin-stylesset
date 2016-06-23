@@ -1248,11 +1248,42 @@ select.form-small {
   -ms-flex-shrink: 1;
   -webkit-flex-shrink: 1;
   flex-shrink: 1;
+  color: #333;
   background: #f5f5f5;
 }
-.modal-header {
+.modal-header a,
+.modal-footer a,
+.modal-header a:active,
+.modal-footer a:active,
+.modal-header a:hover,
+.modal-footer a:hover {
+  color: #333;
+  text-decoration: none;
+}
+.modal-dark.modal-header,
+.modal-dark.modal-footer {
+  color: #fff;
+  background: #555;
+}
+.modal-dark.modal-header a,
+.modal-dark.modal-footer a,
+.modal-dark.modal-header a:active,
+.modal-dark.modal-footer a:active,
+.modal-dark.modal-header a:hover,
+.modal-dark.modal-footer a:hover {
+  color: #fff;
+}
+.modal-light.modal-header,
+.modal-light.modal-footer {
+  background: #fff;
+}
+.modal-header-title {
   font-size: 24.5px;
   font-weight: bold;
+}
+.modal-header-right {
+  float: right;
+  position: relative;
 }
 .modal-footer {
   border-radius: 0 0 4px 4px;
@@ -1268,10 +1299,17 @@ select.form-small {
   overflow: auto;
   padding: 0 15px;
 }
-.modal-content-confirm {
+.modal-content-confirm,
+.modal-content-message {
   font-size: 18px;
   margin: 0;
   padding: 55px 0 45px;
+}
+.modal-content-center {
+  text-align: center;
+}
+.modal-content-right {
+  text-align: right;
 }
 .modal-waiting {
   -ms-flex-grow: 1;
