@@ -191,10 +191,14 @@ a.mainbox-menu-link.active:before {
   padding: 0;
 }
 input:not([type]).mainbox-content-header-filter,
-input[type].mainbox-content-header-filter {
+input[type].mainbox-content-header-filter,
+select.mainbox-content-header-filter {
   border-radius: 16px;
-  margin: 0;
+  margin: 0 10px 0 0;
   padding: 0 14px;
+}
+select.mainbox-content-header-filter {
+  padding: 0 20px 0 14px;
 }
 .mainbox-content-header-buttons {
   float: right;
