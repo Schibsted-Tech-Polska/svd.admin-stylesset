@@ -227,8 +227,7 @@ select.mainbox-content-header-filter {
   margin: 0 13px;
 }
 .mainbox-content-header-breadcrumbs-item:first-child:before {
-  content: '';
-  margin: 0;
+  display: none;
 }
 @media (min-width: 1101px) {
   .mainbox-content-header-breadcrumbs {
